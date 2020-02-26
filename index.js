@@ -27,12 +27,10 @@ app.post('/MousePosition', (req, resp) => {
     const minValue = 1
     var mouseDeltaX = req.body.mouseDeltaX;
     var mouseDeltaY = req.body.mouseDeltaY;
-    //var deviceSize = req.body.deviceSize;
     var newMousePositionX = 0;
     var newMousePositionY = 0;
-    var magicValueX = mouseDeltaX * pointerSensitivity// map_range((Math.pow(mouseDeltaX,3))/resistence,-1000,1000,-5,5);
-    var magicValueY = mouseDeltaY * pointerSensitivity// map_range((Math.pow(mouseDeltaY,3))/resistence,-1000,1000,-5,5);
-
+    var magicValueX = mouseDeltaX * pointerSensitivity
+    var magicValueY = mouseDeltaY * pointerSensitivity
     if (mouseDeltaX > 0 && mouseDeltaX > 1)
         newMousePositionX = robot.getMousePos().x + magicValueX;
     else if (mouseDeltaX < 0 && mouseDeltaX < -1)
