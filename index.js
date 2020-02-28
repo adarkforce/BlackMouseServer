@@ -70,7 +70,6 @@ app.post('/MousePosition', (req, resp) => {
 });
 
 app.get('/', (req, res) => {
-    console.log('get chiamata!')
     res.status(200).send(JSON.stringify({ result: "OK", name: os.hostname() }));
 });
 
@@ -85,7 +84,6 @@ app.get('/MouseLeftClick', (req, res) => {
 
 app.post('/KeyHandler', (req, res) => {
     key = req.body.key;
-    console.log("KEY = ", key);
     try {
         if(key=='Backspace')
             robot.keyTap(key.toLowerCase())
