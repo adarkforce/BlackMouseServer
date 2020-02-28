@@ -18,6 +18,9 @@
 
   `node index.js`
   
+<p align="center">
+  <img src="https://github.com/adarkforce/BlackMouse/blob/master/readme-files/app-demo.gif?raw=true"/>
+</p>
   
 ## TODOs
 
