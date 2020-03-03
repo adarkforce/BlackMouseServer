@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "kill-port": "^1.6.0",
     "local-devices": "^3.0.0",
+    "pug": "^2.0.4",
     "robotjs": "^0.6.0"
   },
   "devDependencies": {
