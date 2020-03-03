@@ -1,9 +1,8 @@
 const express = require('express')
 const path = require('path')
-const { controller } = require('./controller')
+const { controller } = require('./mouse-controller')
 var app = express();
 var router = express.Router();
-const killPort = require('kill-port')
 var server = null;
 let connections = [];
 
@@ -35,7 +34,6 @@ router.get('/Connect', (req, res) => {
 })
 router.get('/Disconnect', (req, res) => {
 
-    console.log(Object.keys(server));
     server.close();
     connections.forEach(curr => curr.end());
     setTimeout(() => connections.forEach(curr => curr.destroy()), 5000);
@@ -43,7 +41,9 @@ router.get('/Disconnect', (req, res) => {
 })
 
 
+exports.app =  app;
+/*
 app.listen(4000, () => {
     console.log("Listening")
 
-});
+});*/
