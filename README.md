@@ -16,7 +16,7 @@
   
 - Run the app
 
-  `node index.js`
+  `node app.js`
   
 <p align="center">
   <img src="https://github.com/adarkforce/BlackMouse/blob/master/readme-files/app-demo.gif?raw=true"/>
@@ -26,4 +26,4 @@
 
 - [x] Adding standalone apps, both for Windows and MacOs
 - [ ] Allowing user to choose port
-- [ ] Maybe a web UI
+- [x] Maybe a web UI
